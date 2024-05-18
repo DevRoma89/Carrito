@@ -33,6 +33,9 @@
             <div class="input-group mt-2">
                 <input class="form-control" type="text" name="correo" id="correo" placeholder="Correo" required autofocus>
             </div>
+            <div class="input-group mt-2">
+                <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario" required autofocus>
+            </div>
 
             <div class="input-group mt-2">
                 <input class="form-control me-1" type="text" name="contrasenha" id="contrasenha" placeholder="Contraseña" required autofocus>

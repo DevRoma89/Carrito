@@ -15,12 +15,12 @@ $cn = Conexion::conectar();
     <title>Carrito</title>
 </head>
 
-<body>
+<body class="bg-secondary">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Logo de la empresa</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -71,7 +71,7 @@ $cn = Conexion::conectar();
                                 <input type="hidden" name="precio" id="precio" value=" <?php echo $producto['Precio']; ?> ">
                                 <input type="hidden" name="cantida" id="cantidad" value=" <?php echo 1; ?> ">
 
-                                <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">
+                                <button class="btn btn-secondary" name="btnAccion" value="Agregar" type="submit">
                                     Agregar al carrito
                                 </button>
 
