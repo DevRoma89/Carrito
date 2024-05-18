@@ -13,7 +13,7 @@
 
     <div class="bg-white p-5 rounded-5 text-secondary " style="width: 30rem;">
 
-        <form action="../controller/controladorLogin.php" method="post">
+        <form action="../controller/controladorRegistro.php" method="post">
             <div class="d-flex justify-content-center ">
 
                 <img src="../svg/person-vcard.svg" alt="login-icon" style="height: 7rem;">
