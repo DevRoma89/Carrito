@@ -11,7 +11,7 @@
   <title>Document</title>
 </head>
 
-<body class="bg-info d-flex justify-content-center align-items-center vh-100">
+<body class="bg-secondary d-flex justify-content-center align-items-center vh-100">
 
   <div class="bg-white p-5 rounded-5 text-secondary " style="width: 25rem;">
 
@@ -22,7 +22,7 @@
       </div>
       <div class="text-center fs-1 fw-bold">Login</div>
       <div class="input-group mt-4">
-        <div class="input-group-text  bg-info">
+        <div class="input-group-text  bg-secondary">
           <img src="../svg/person-bounding-box.svg" alt="" style="height: 1rem;">
         </div>
 
@@ -30,17 +30,17 @@
 
       </div>
       <div class="input-group mt-3">
-        <div class="input-group-text bg-info">
+        <div class="input-group-text bg-secondary">
           <img src="../svg/lock-fill.svg" alt="" style="height: 1rem;">
         </div>
 
         <input class="form-control" type="password" name="pass" id="pass" placeholder="Contraseña" required>
 
       </div>
-      <button class="btn btn-info text-white w-100 mt-4 " type="submit">Iniciar Sesion</button>
+      <button class="btn btn-secondary text-white w-100 mt-4 " type="submit">Iniciar Sesion</button>
     </form>
     <div class="text-center mt-3">
-      <a href="./registrar.php" class="text-info">Registrarse</a>
+      <a href="./registro.php" class="text-info">Registrarse</a>
     </div>
   </div>
 </body>

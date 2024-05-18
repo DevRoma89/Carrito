@@ -9,9 +9,9 @@
     <title>Document</title>
 </head>
 
-<body class="bg-info d-flex justify-content-center align-items-center vh-100">
+<body class="bg-secondary d-flex justify-content-center align-items-center vh-100">
 
-    <div class="bg-white p-5 rounded-5 text-secondary " style="width: 25rem;">
+    <div class="bg-white p-5 rounded-5 text-secondary " style="width: 30rem;">
 
         <form action="../controller/controladorLogin.php" method="post">
             <div class="d-flex justify-content-center ">
@@ -25,7 +25,21 @@
                 <input class="form-control ms-1" type="text" name="apellido" id="apellido" placeholder="Apellido" required autofocus>
             </div>
 
-            <button class="btn btn-info text-white w-100 mt-4 " type="submit">Registrarse</button>
+            <div class="input-group mt-2">
+                <input class="form-control me-1" type="text" name="telefono" id="telefono" placeholder="Telefono" required autofocus>
+                <input class="form-control ms-1" type="text" name="cedula" id="cedula" placeholder="Cedula" required autofocus>
+            </div>
+
+            <div class="input-group mt-2">
+                <input class="form-control" type="text" name="correo" id="correo" placeholder="Correo" required autofocus>
+            </div>
+
+            <div class="input-group mt-2">
+                <input class="form-control me-1" type="text" name="contrasenha" id="contrasenha" placeholder="Contraseña" required autofocus>
+                <input class="form-control ms-1" type="text" name="contrasenhaConfirm" id="contrasenhaConfirm" placeholder="Confirmar Contraseña" required autofocus>
+            </div>
+
+            <button class="btn btn-secondary text-white w-100 mt-4 " type="submit">Registrarse</button>
         </form>
         <div class="text-center mt-3">
             <a href="./login.php" class="text-info">Iniciar Sesion</a>
