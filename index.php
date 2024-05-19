@@ -57,7 +57,7 @@ $cn = Conexion::conectar();
             ?>
 
             <?php foreach ($lista as $producto) { ?>
-                <div class="col-3 p-2">
+                <div class="col-sm-3  mt-2">
                     <div class="card">
                         <img class="card-img-top" src=" <?php echo $producto['Imagen']; ?>" alt="<?php echo $producto['Nombre']; ?>" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content=" <?php echo $producto['Descripcion']; ?> " />
                         <div class="card-body">
