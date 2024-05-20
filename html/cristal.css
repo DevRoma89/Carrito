@@ -1,0 +1,18 @@
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  border-radius: 15px; /* Bordes redondeados */
+  backdrop-filter: blur(10px); /* Desenfoque del fondo */
+  -webkit-backdrop-filter: blur(10px); /* Desenfoque del fondo para navegadores con prefijo webkit */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /* Sombra suave */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura completa de la ventana */
+}
+body {
+  background: url('../img/fondo2.jpg') no-repeat center center fixed; /* Fondo de pantalla aleatorio*/
+  background-size: cover; /* Ajuste del tamaño del fondo */
+}
