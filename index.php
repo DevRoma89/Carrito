@@ -33,6 +33,10 @@ $cn = Conexion::conectar();
                         <a class="nav-link active" href="#" aria-current="page">Carrito
                             <span class="visually-hidden">(current)</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Carrito/html/login.php" aria-current="page">iniciar sesion
+                            <span class="visually-hidden">(current)</span></a>
+                    </li>
                 </ul>
             </div>
         </div>
