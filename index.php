@@ -1,58 +1,32 @@
 <?php
+//session_start();
 include "./php/conexion.php";
+include "./php/carrito.php";
+include "./php/cabecera.php"; 
 
 $cn = Conexion::conectar();
+//Condicional que ciera la sesión
+if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
+    // Destruir todas las variables de sesión
+    session_unset();
+    // Destruir la sesión
+    session_destroy();
+    // Redirigir al usuario a una página de inicio de sesión o a otra página deseada
+    echo "<script>window.location.href = '../Carrito/index.php';</script>";
+    exit;
+}
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Carrito</title>
-</head>
-
-<body class="bg-secondary">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo de la empresa</a>
-            <button class="navbar-toggler d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.php" aria-current="page">Home
-                            <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Carrito
-                            <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../Carrito/html/login.php" aria-current="page">iniciar sesion
-                            <span class="visually-hidden">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
     <div class="contairner-fluid p-2">
-        <br>
         <div class="alert alert-success">
-            Pantalla de mensaje
-            <?php print_r($_POST); ?>
+            
+            <?php echo $mensaje; ?>
             <a href="#" class="badge text-bg-success">Ver carrito</a>
         </div>
 
         <div class="row p-2 ">
-
+ 
             <?php
             $sentencia = $cn->prepare("SELECT * FROM `tblproductos`");
             $sentencia->execute();
@@ -63,8 +37,15 @@ $cn = Conexion::conectar();
             <?php foreach ($lista as $producto) { ?>
                 <div class="col-sm-3  mt-2">
                     <div class="card">
-                        <img class="card-img-top" src=" <?php echo $producto['Imagen']; ?>" alt="<?php echo $producto['Nombre']; ?>" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content=" <?php echo $producto['Descripcion']; ?> " />
-                        <div class="card-body">
+                        <img class="card-img-top" 
+                            src=" <?php echo $producto['Imagen']; ?>" 
+                            alt="<?php echo $producto['Nombre']; ?>" 
+                            data-bs-toggle="popover" 
+                            data-bs-trigger="hover" 
+                            data-bs-content=" <?php echo $producto['Descripcion']; ?> " 
+                            height = "317px"
+                        />
+                        <div class="card-body" style="width: 18rem;" >
                             <span><?php echo $producto['Nombre']; ?></span>
                             <h4 class="card-title">Gs.<?php echo $producto['Precio']; ?></h4>
                             <p class="card-text">Descripcion</p>
@@ -73,12 +54,12 @@ $cn = Conexion::conectar();
                                 <input type="hidden" name="id" id="id" value=" <?php echo $producto['Id']; ?> ">
                                 <input type="hidden" name="nombre" id="nombre" value=" <?php echo $producto['Nombre']; ?> ">
                                 <input type="hidden" name="precio" id="precio" value=" <?php echo $producto['Precio']; ?> ">
-                                <input type="hidden" name="cantida" id="cantidad" value=" <?php echo 1; ?> ">
-
+                                <input type="hidden" name="cantidad" id="cantidad" value=" <?php echo 1; ?> ">
+                                
                                 <button class="btn btn-secondary" name="btnAccion" value="Agregar" type="submit">
                                     Agregar al carrito
                                 </button>
-
+                                
                             </form>
 
                         </div>
