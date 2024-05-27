@@ -33,8 +33,13 @@ class controladorLogin extends Conexion
                     exit(); // Detener el script después de redirigir
                     
                 } else {
+<<<<<<< HEAD
                     echo "<script>alert('error: usuario o contraseña incorrecto');</script>";
                     echo "<script>window.history.back();</script>";                   
+=======
+                    echo "<script>alert('Login Incorrecto');</script>";
+                    echo "<script>window.location.href = '../html/login.php';</script>";
+>>>>>>> e37043eee6fec182dba995013db8461b30263c39
                     exit(); // Detener el script después de redirigir
                 }
             } catch (PDOException $e) {
