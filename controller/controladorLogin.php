@@ -27,7 +27,7 @@ class controladorLogin extends Conexion
                     
                 } else {
                     echo "<script>alert('Login Incorrecto');</script>";
-                    echo "<script>window.location.href = '../login.php';</script>";
+                    echo "<script>window.location.href = '../html/login.php';</script>";
                     exit(); // Detener el script después de redirigir
                 }
             } catch (PDOException $e) {

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <title>Document</title>
+ 
+    <title>Registro</title>
 </head>
 
 <body class="bg-secondary d-flex justify-content-center align-items-center vh-100">
@@ -15,7 +16,6 @@
 
         <form action="../controller/controladorRegistro.php" method="post">
             <div class="d-flex justify-content-center ">
-
                 <img src="../svg/person-vcard.svg" alt="login-icon" style="height: 7rem;">
             </div>
             <div class="text-center fs-1 fw-bold">Registro</div>
@@ -44,8 +44,14 @@
 
             <button class="btn btn-secondary text-white w-100 mt-4 " type="submit">Registrarse</button>
         </form>
-        <div class="text-center mt-3">
-            <a href="./login.php" class="text-info">Iniciar Sesion</a>
+        <div class="row text-center mt-3">
+            <div class="col-6">
+                <a href="../index.php" class="text-info">Volver</a>
+            </div>
+            <div class="col-6">
+
+                <a href="./login.php" class="text-info">Iniciar Sesion</a>
+            </div>
         </div>
     </div>
 </body>

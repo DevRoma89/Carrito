@@ -20,7 +20,7 @@ $cn = Conexion::conectar();
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Logo de la empresa</a>
-            <button class="navbar-toggler d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -33,7 +33,14 @@ $cn = Conexion::conectar();
                         <a class="nav-link active" href="#" aria-current="page">Carrito
                             <span class="visually-hidden">(current)</span></a>
                     </li>
+                   
+                   
                 </ul>
+                <div class="nav-iten">
+                    <a class="nav-link active text-white" href="../Carrito/html/login.php" aria-current="page">Iniciar Sesion
+                            <span class="visually-hidden">(current)</span></a>
+                    </div>
+
             </div>
         </div>
     </nav>
