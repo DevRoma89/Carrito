@@ -58,9 +58,8 @@
                         <img src="../Carrito/svg/person-circle.svg" alt="" style = "height: 2rem">
                     </a>
                 <?php } else { ?>
-                    <a class = "btn btn-primary ms-auto rounded-pill" href="../Carrito/html/login.php">Iniciar Sesión</a>
+                    <a class = "btn btn-primary ms-auto rounded-pill" href="view/login.php">Iniciar Sesión</a>
                 <?php } ?>
-                  
             </div>
         </div>
     </nav>

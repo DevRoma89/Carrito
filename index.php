@@ -15,54 +15,8 @@ if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
     echo "<script>window.location.href = '../Carrito/index.php';</script>";
     exit;
 }
-
 ?>
-
-<<<<<<< HEAD
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Carrito</title>
-</head>
-
-<body class="bg-secondary">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo de la empresa</a>
-            <button class="navbar-toggler d-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.php" aria-current="page">Home
-                            <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Carrito
-                            <span class="visually-hidden">(current)</span></a>
-                    </li>
-                   
-                   
-                </ul>
-                <div class="nav-iten">
-                    <a class="nav-link active text-white" href="../Carrito/html/login.php" aria-current="page">Iniciar Sesion
-                            <span class="visually-hidden">(current)</span></a>
-                    </div>
-
-            </div>
-        </div>
-    </nav>
-
-
->>>>>>> e37043eee6fec182dba995013db8461b30263c39
-    <div class="contairner-fluid p-2">
+<div class="contairner-fluid p-2">
         <div class="alert alert-success">
             
             <?php echo $mensaje; ?>
