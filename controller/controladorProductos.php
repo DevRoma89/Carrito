@@ -73,7 +73,7 @@ class Productos extends Conexion
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <a href="productos.php?id='.$producto['Id'].'" type="button" class="btn btn-warning">Modificar</a>
+                                <a href="productos.php?ModificarId='.$producto['Id'].'" type="button" class="btn btn-warning">Modificar</a>
                                 </div>
                             </div>
                           </div>
