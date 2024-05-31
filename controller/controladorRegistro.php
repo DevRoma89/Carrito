@@ -50,8 +50,8 @@ class controladorRegistro extends Conexion {
             }
         }else{
           
-                echo "<script>alert('Registro Incorrecto');</script>";
-                echo "<script>window.location.href = '../html/registro.php';</script>";
+                echo "<script>alert('Error al validar la contraseña');</script>";
+                echo "<script>window.history.back();</script>";
                 exit(); 
         }
 
