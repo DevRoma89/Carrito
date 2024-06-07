@@ -18,9 +18,11 @@
                 <h5 class="modal-title">Perfil</h5>
                 
             </div>
-            <div class="modal-body justify-content-center">
+            <div class="modal-body text-center">
+                <h6>Usuario</h6>
                 <?php echo $_SESSION['Nombre'] . " " . $_SESSION['Apellido']?>
-                <?php echo "</br>".$_SESSION['email'] ?>
+                <h6>Correo</h6>
+                <?php echo $_SESSION['email'] ?>
             </div>
             <div class="modal-footer justify-content-center">
                 <a href="?logout=true" class="btn btn-primary">Cerrar Sesión</a>
@@ -46,7 +48,7 @@
                     </li>
                     <!--Boton para revisar el carrito-->
                     <li class="nav-item">
-                        <a class="nav-link active" href="../Carrito/php/info_carrito.php">
+                        <a class="nav-link active" href="./view/info_carrito.php">
                             Carrito 🛒 <?php echo (empty($_SESSION['carrito'])) ? 0 : count($_SESSION['carrito'])?>  
                         </a>
                     </li>
