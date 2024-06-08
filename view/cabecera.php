@@ -15,7 +15,12 @@
         <div class="modal-dialog" style="position: fixed; right: 2%;">
             <div class="modal-content">
             <div class="modal-header d-flex justify-content-center">
-                <h5 class="modal-title">Perfil</h5>
+                <h5 class="modal-title">
+                    Perfil
+                    <?php if(($_SESSION['rol'])==1) {            
+                        echo " Admin";
+                    }?>
+                </h5>
                 
             </div>
             <div class="modal-body text-center">
@@ -52,10 +57,17 @@
                             Carrito 🛒 <?php echo (empty($_SESSION['carrito'])) ? 0 : count($_SESSION['carrito'])?>  
                         </a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <?php if(($_SESSION['rol'])==1) { ?>
+                            <a class="nav-link active" href="#" aria-current="page">
+                                Stock
+                            </a>
+                        <?php }?> 
+                    </li>
                 </ul>
                 <!--Boton que despliega informacion del perfil del usuario o para iniciar sesión-->
                 <?php if(isset($_SESSION['Nombre_Usuario'])) { ?>
+                    
                     <a href="#" class = "ms-auto" data-bs-toggle="modal" data-bs-target="#info_perfil">
                         <img src="../Carrito/svg/person-circle.svg" alt="" style = "height: 2rem">
                     </a>
