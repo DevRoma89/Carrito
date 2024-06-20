@@ -2,7 +2,7 @@
 //session_start();
 include "./php/conexion.php";
 include "./php/carrito.php";
-include "./php/cabecera.php"; 
+include "./view/cabecera.php"; 
 
 $cn = Conexion::conectar();
 //Condicional que ciera la sesión
@@ -11,20 +11,22 @@ if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
     session_unset();
     // Destruir la sesión
     session_destroy();
-    // Redirigir al usuario a una página de inicio de sesión o a otra página deseada
+    // Redirigir en la pagina principal
     echo "<script>window.location.href = '../Carrito/index.php';</script>";
     exit;
 }
 ?>
 <div class="contairner-fluid p-2">
+    <?php if (!empty($mensaje)) { ?> 
         <div class="alert alert-success">
-            
-            <?php echo $mensaje; ?>
-            <a href="#" class="badge text-bg-success">Ver carrito</a>
+            <?php 
+                echo $mensaje;
+            ?>
+            <a href="php/info_carrito.php" class="badge text-bg-success">Ver carrito</a>
         </div>
-
-        <div class="row p-2 ">
- 
+        <?php } ?>
+        
+        <div class="row p-2"> 
             <?php
             $sentencia = $cn->prepare("SELECT * FROM `tblproductos`");
             $sentencia->execute();

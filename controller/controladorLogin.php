@@ -29,6 +29,7 @@ class controladorLogin extends Conexion
                     $_SESSION['Nombre'] = $result['nombre'];
                     $_SESSION['Apellido'] = $result['apellido'];
                     $_SESSION['email'] = $result['correo'];
+                    $_SESSION['rol'] = $result['rol'];
                    
                     exit(); // Detener el script después de redirigir
                     

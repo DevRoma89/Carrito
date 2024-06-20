@@ -1,32 +1,43 @@
 <?php 
     session_start();
-    $mensaje=" ";
+    $mensaje="";
     if (isset($_POST['btnAccion'])) {
-        $ID=$_POST['id'];
-        $NOMBRE=$_POST['nombre'];
-        $PRECIO=$_POST['precio'];
-        $CANTIDAD=$_POST['cantidad'];
+        
         //$mensaje= $NOMBRE . " se agrego correctamente al carrito...";
 
-        if (!isset($_SESSION['carrito'])) {
-            $PRODUCTO = array (
-                'ID'=>$ID,
-                'NOMBRE'=>$NOMBRE,
-                'PRECIO'=>$PRECIO,
-                'CANTIDAD'=>$CANTIDAD
-            );
-            $_SESSION['carrito'][0]=$PRODUCTO;
-        }else{
-            $NumeroProductos=count($_SESSION['carrito']);
-            $PRODUCTO = array (
-                'ID'=>$ID,
-                'NOMBRE'=>$NOMBRE,
-                'PRECIO'=>$PRECIO,
-                'CANTIDAD'=>$CANTIDAD
-            );
-            $_SESSION['carrito'][$NumeroProductos]=$PRODUCTO;
+        switch ($_POST['btnAccion']) {
+            case 'Agregar':
+                if (!isset($_SESSION['carrito'])) {
+                    $PRODUCTO = array (
+                        'ID'=>$_POST['id'],
+                        'NOMBRE'=>$_POST['nombre'],
+                        'PRECIO'=>$_POST['precio'],
+                        'CANTIDAD'=>$_POST['cantidad']
+                    );
+                    $_SESSION['carrito'][0]=$PRODUCTO;
+                }else{
+                    $NumeroProductos=count($_SESSION['carrito']);
+                    $PRODUCTO = array (
+                        'ID'=>$_POST['id'],
+                        'NOMBRE'=>$_POST['nombre'],
+                        'PRECIO'=>$_POST['precio'],
+                        'CANTIDAD'=>$_POST['cantidad']
+                    );
+                    $_SESSION['carrito'][$NumeroProductos]=$PRODUCTO;
+                    
+                }
+                $mensaje = "Se añadio ". $_POST['nombre']. " al carrito";
+                break;
             
+            case 'Eliminar':
+                foreach ($_SESSION['carrito'] as $indice=>$PRODUCTO) {
+                    if ($PRODUCTO['ID'] == $_POST['id']) {
+                        unset($_SESSION['carrito'] [$indice]);
+                        echo "<script> alert('Producto eliminado correctamente'); </script>";
+                    }
+                }
+            break;
         }
-        $mensaje = print_r($_SESSION['carrito'],true);
+               
     }
 ?>
