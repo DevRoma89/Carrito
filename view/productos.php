@@ -1,7 +1,7 @@
 <?php
 
 include '../controller/controladorProductos.php';
-$ctrProductos = new Productos();
+$ctrProductos = new CtrProductos();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ $ctrProductos = new Productos();
 
                 <form class="border border-secondary p-5 rounded-5" method="post">
                     <h3 class="text-center text-secondary mb-4">Formulario Usuarios</h3>
-                    
+
                     <div class="mb-3">
                         <label for="" class="form-label">Nombre del Producto</label>
                         <input type="text" class="form-control" name="nombre" required>
@@ -39,22 +39,19 @@ $ctrProductos = new Productos();
                         <label for="" class="form-label ">Imagen</label>
                         <input type="text" class="form-control" name="imagen" required>
                     </div>
-
+                    <div class="mb-3">
+                            <label for="" class="form-label">Descripcion</label>
+                            <textarea class="form-control" name="descripcion" rows="3"></textarea>
+                    </div>
                     <button class="btn btn-primary text-white  mt-4 " type="submit" name="btnAgregar" value="ok">Agregar</button>
 
-                    <?php
-                    $ctrProductos->agregarProducto();
-                    ?>
+
 
                 </form>
 
             </div>
 
-            <?php
 
-            $ctrProductos->eliminarProducto();
-
-            ?>
 
             <div class="col-md-8">
 
@@ -73,15 +70,15 @@ $ctrProductos = new Productos();
                                 </tr>
                             </thead>
                             <tbody>
-
                                 <?php
+                                $ctrProductos->mostrarProductos();
+                                $ctrProductos->agregarProducto();
+                                $ctrProductos->eliminarProducto();
+                                $ctrProductos->modificarProducto();
 
-
-                                $ctrProductos->listarProductos();
+                                
 
                                 ?>
-
-
                             </tbody>
 
                         </table>

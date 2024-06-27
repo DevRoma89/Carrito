@@ -1,0 +1,38 @@
+<from action="productos.php" method="post">
+  <div class="modal-body">
+    <div class="mb-3">
+      <label for="" class="form-label">Nombre del Producto</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nombre"
+        value="' . $producto['Nombre'] . '"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Precio</label>
+      <input
+        type="number"
+        class="form-control"
+        name="precio"
+        value="' . $producto['Precio'] . '"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Imagen</label>
+      <input
+        type="text"
+        class="form-control"
+        name="imagen"
+        value="' . $producto['Imagen'] . '"
+        required
+      />
+    </div>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+      Close
+    </button>
+    <button type="submit" class="btn btn-warning">Modificar</button>
+  </div>
+</from>
