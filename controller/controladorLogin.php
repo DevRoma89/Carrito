@@ -24,7 +24,7 @@ class controladorLogin extends Conexion
                 if ($ps->rowCount() > 0) {
                     $result = $ps->fetch(PDO::FETCH_ASSOC);
                     echo "<script>alert('Credenciales ingresadas correctamente');</script>";
-                    echo "<script>window.location.href = '../index.php';</script>";
+                    echo "<script>window.location.href = '../view/index.php';</script>";
                     $_SESSION['Nombre_Usuario'] = $result['username'];
                     $_SESSION['Nombre'] = $result['nombre'];
                     $_SESSION['Apellido'] = $result['apellido'];

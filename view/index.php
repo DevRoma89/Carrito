@@ -1,8 +1,8 @@
 <?php
 //session_start();
-include "./php/conexion.php";
-include "./php/carrito.php";
-include "./view/cabecera.php"; 
+include "../php/conexion.php";
+include "../php/carrito.php";
+include './cabecera.php'; 
 
 $cn = Conexion::conectar();
 //Condicional que ciera la sesión
@@ -12,7 +12,7 @@ if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
     // Destruir la sesión
     session_destroy();
     // Redirigir en la pagina principal
-    echo "<script>window.location.href = '../Carrito/index.php';</script>";
+    echo "<script>window.location.href = '../view/index.php';</script>";
     exit;
 }
 ?>
@@ -22,7 +22,7 @@ if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
             <?php 
                 echo $mensaje;
             ?>
-            <a href="php/info_carrito.php" class="badge text-bg-success">Ver carrito</a>
+            <a href="../php/info_carrito.php" class="badge text-bg-success">Ver carrito</a>
         </div>
         <?php } ?>
         

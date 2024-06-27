@@ -9,7 +9,7 @@
     <title>Carrito</title>
 </head>
 
-<body class="bg-secondary">
+<body >
     <!--Perfil del usuario-->
     <div class="modal fade" tabindex="-1" id="info_perfil">
         <div class="modal-dialog" style="position: fixed; right: 2%;">
@@ -47,19 +47,19 @@
                 <ul class="navbar-nav mt-2">
                     <!--Boton para volver al inicio-->
                     <li class="nav-item">
-                        <a class="nav-link active" href="../index.php" aria-current="page">
+                        <a class="nav-link active" href="../view/index.php" aria-current="page">
                             Home
                         </a>
                     </li>
                     <!--Boton para revisar el carrito-->
                     <li class="nav-item">
-                        <a class="nav-link active" href="./view/info_carrito.php">
+                        <a class="nav-link active" href="../view/info_carrito.php">
                             Carrito 🛒 <?php echo (empty($_SESSION['carrito'])) ? 0 : count($_SESSION['carrito'])?>  
                         </a>
                     </li>
                     <li class="nav-item">
                         <?php if(($_SESSION['rol'])==1) { ?>
-                            <a class="nav-link active" href="#" aria-current="page">
+                            <a class="nav-link active" href="../view/productos.php" aria-current="page">
                                 Stock
                             </a>
                         <?php }?> 
@@ -69,10 +69,10 @@
                 <?php if(isset($_SESSION['Nombre_Usuario'])) { ?>
                     
                     <a href="#" class = "ms-auto" data-bs-toggle="modal" data-bs-target="#info_perfil">
-                        <img src="../Carrito/svg/person-circle.svg" alt="" style = "height: 2rem">
+                        <img src="../svg/person-circle.svg" alt="" style = "height: 2rem">
                     </a>
                 <?php } else { ?>
-                    <a class = "btn btn-primary ms-auto rounded-pill" href="view/login.php">Iniciar Sesión</a>
+                    <a class = "btn btn-primary ms-auto rounded-pill" href="../view/login.php">Iniciar Sesión</a>
                 <?php } ?>
             </div>
         </div>

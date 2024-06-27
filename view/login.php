@@ -42,7 +42,7 @@
       <button class="btn btn-primary text-white w-100 mt-4 " type="submit">Iniciar Sesion</button>
     <div class="row text-center mt-3">
       <div class="col-6">
-        <a href="../index.php" class="text-white">Volver</a>
+        <a href="../view/index.php" class="text-white">Volver</a>
       </div>
       <div class="col-6">
         

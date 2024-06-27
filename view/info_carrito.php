@@ -1,7 +1,7 @@
 <?php
     include "../php/conexion.php";
     include "../php/carrito.php";
-    include "./cabecera.php";
+    require_once "../view/cabecera.php";
 ?>   
 <?php
     $total=0;
