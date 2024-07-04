@@ -1,7 +1,7 @@
 <?php
     include "../php/conexion.php";
     include "../php/carrito.php";
-    require_once "../view/cabecera.php";
+    include "../view/cabecera.php";
 ?>   
 <?php
     $total=0;
@@ -32,7 +32,7 @@
                                 type= "submit"
                                 value = "Eliminar"
                                 name = "btnAccion"
-                                >Eliminar
+                                ><img src="../svg/trash-fill.svg" alt="">
                             </button>
                         </form>                       
                     </td>
@@ -54,6 +54,9 @@
     </div>
     
 <?php } ?>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 </body>
 </html>

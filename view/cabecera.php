@@ -1,3 +1,15 @@
+<?php 
+    //Condicional que ciera la sesión
+    if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
+        // Destruir todas las variables de sesión
+        session_unset();
+        // Destruir la sesión
+        session_destroy();
+        // Redirigir en la pagina principal
+        echo "<script>window.location.href = '../view/index.php';</script>";
+        exit;
+    }
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +80,7 @@
                 <!--Boton que despliega informacion del perfil del usuario o para iniciar sesión-->
                 <?php if(isset($_SESSION['Nombre_Usuario'])) { ?>
                     
-                    <a href="#" class = "ms-auto" data-bs-toggle="modal" data-bs-target="#info_perfil">
+                    <a href="" class = "ms-auto" data-bs-toggle="modal" data-bs-target="#info_perfil">
                         <img src="../svg/person-circle.svg" alt="" style = "height: 2rem">
                     </a>
                 <?php } else { ?>

@@ -1,20 +1,9 @@
 <?php
-//session_start();
 include "../php/conexion.php";
 include "../php/carrito.php";
-include './cabecera.php'; 
+include '../view/cabecera.php'; 
 
 $cn = Conexion::conectar();
-//Condicional que ciera la sesión
-if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
-    // Destruir todas las variables de sesión
-    session_unset();
-    // Destruir la sesión
-    session_destroy();
-    // Redirigir en la pagina principal
-    echo "<script>window.location.href = '../view/index.php';</script>";
-    exit;
-}
 ?>
 <div class="contairner-fluid p-2">
     <?php if (!empty($mensaje)) { ?> 
@@ -22,7 +11,7 @@ if(isset($_GET['logout']) && $_GET['logout'] === 'true') {
             <?php 
                 echo $mensaje;
             ?>
-            <a href="../php/info_carrito.php" class="badge text-bg-success">Ver carrito</a>
+            <a href="../view /info_carrito.php" class="badge text-bg-success">Ver carrito</a>
         </div>
         <?php } ?>
         
