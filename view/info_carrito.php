@@ -1,5 +1,4 @@
 <?php
-    include "../php/conexion.php";
     include "../php/carrito.php";
     include "../view/cabecera.php";
 ?>   
@@ -21,10 +20,10 @@
             foreach($_SESSION['carrito'] as $indice=>$PRODUCTO){ ?>
             
                 <tr>
-                    <td class="text-center" width="40%"><?php echo $PRODUCTO['NOMBRE']?></td>
-                    <td class="text-center" width="15%"><?php echo $PRODUCTO['CANTIDAD']?></td>
-                    <td class="text-center" width="20%"><?php echo $PRODUCTO['PRECIO']?></td>
-                    <td class="text-center" width="20%"><?php echo number_format($PRODUCTO['PRECIO'] * $PRODUCTO['CANTIDAD'],2)?></td>
+                    <td class="text-center p-3" width="40%"><?php echo $PRODUCTO['NOMBRE']?></td>
+                    <td class="text-center p-3" width="15%"><?php echo $PRODUCTO['CANTIDAD']?></td>
+                    <td class="text-center p-3" width="20%"><?php echo $PRODUCTO['PRECIO']?></td>
+                    <td class="text-center p-3" width="20%"><?php echo number_format($PRODUCTO['PRECIO'] * $PRODUCTO['CANTIDAD'],2)?></td>
                     <td class="text-center" width="5%">
                         <form action="" method="post">
                             <input type="hidden" name="id" id="id" value=" <?php echo $PRODUCTO['ID']; ?> ">
@@ -42,11 +41,11 @@
                 <?php 
                 $total=$total+($PRODUCTO['PRECIO'] * $PRODUCTO['CANTIDAD']); 
                 }?>
-                    <tr>
-                        <td colspan="3" align="right"><h3>Total a pagar</h3></td>
-                        <td align="right"> <h3><?php echo number_format($total,2); ?> </h3> </td>
-                        <td></td>
-                    </tr>
+                <tr>
+                    <td colspan="3" align="right"><h3>Total a pagar</h3></td>
+                    <td align="right"> <h3><?php echo number_format($total,2); ?> </h3> </td>
+                    <td><a href="../Factura/factura.php" target="_blank" class="btn btn-primary"> Pagar</a></td>
+                </tr>
             </tbody>
 <?php } else {?>
     <div class="alert alert-danger" role="alert">
