@@ -34,19 +34,20 @@
 
 	$pdf->Cell(150,9,iconv("UTF-8", "ISO-8859-1","Email: correo@ejemplo.com"),0,0,'L');
 
-	$pdf->Ln(10);
+	$pdf->Ln(10);*/
 
+	date_default_timezone_set('America/Asuncion');
 	$pdf->SetFont('Arial','',10);
 	$pdf->Cell(30,7,iconv("UTF-8", "ISO-8859-1","Fecha de emisión:"),0,0);
 	$pdf->SetTextColor(97,97,97);
-	$pdf->Cell(116,7,iconv("UTF-8", "ISO-8859-1",date("d/m/Y", strtotime("13-09-2022"))." ".date("h:s A")),0,0,'L');
+	$pdf->Cell(116,7,iconv("UTF-8", "ISO-8859-1",date("d/m/Y")." ".date("h:s A")),0,0,'L');
 	$pdf->SetFont('Arial','B',10);
 	$pdf->SetTextColor(39,39,51);
-	$pdf->Cell(35,7,iconv("UTF-8", "ISO-8859-1",strtoupper("Factura Nro.")),0,0,'C');
+	$pdf->Cell(38,43,iconv("UTF-8", "ISO-8859-1",strtoupper("Factura Nro. 1")),0,0,'C');
 
 	$pdf->Ln(7);
 
-	$pdf->SetFont('Arial','',10);
+	/*$pdf->SetFont('Arial','',10);
 	$pdf->Cell(12,7,iconv("UTF-8", "ISO-8859-1","Cajero:"),0,0,'L');
 	$pdf->SetTextColor(97,97,97);
 	$pdf->Cell(134,7,iconv("UTF-8", "ISO-8859-1","Carlos Alfaro"),0,0,'L');

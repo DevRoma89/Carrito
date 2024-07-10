@@ -21,7 +21,7 @@
                         'ID'=>$_POST['id'],
                         'NOMBRE'=>$_POST['nombre'],
                         'PRECIO'=>$_POST['precio'],
-                        'CANTIDAD'=>$_POST['cantidad']+1
+                        'CANTIDAD'=>$_POST['cantidad']
                     );
                     $_SESSION['carrito'][$NumeroProductos]=$PRODUCTO;
                     
